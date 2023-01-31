@@ -1,0 +1,4 @@
+#!/bin/bash
+
+i2cset -y -r 1 0x20 0x14 0x00
+
