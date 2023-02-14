@@ -11,4 +11,6 @@ sudo ln -s ttyS0   ttyJ50
 sudo ln -s ttyJ50  ttyHoverboard
 sudo ln -s ttyACM0 ttyHeadMCU
 
+sudo ln -s ttyACM1 ttyGPS
+
 popd
