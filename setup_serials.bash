@@ -6,6 +6,7 @@ sudo systemctl stop serial-getty@*
 pushd /dev
 
 sudo ln -s ttyTHS1 ttyJ41_EXP_HEADER || true
+sudo chmod a+rw ttyS0
 sudo ln -s ttyS0   ttyJ50 || true
 
 sudo ln -s ttyJ50  ttyHoverboard || true
