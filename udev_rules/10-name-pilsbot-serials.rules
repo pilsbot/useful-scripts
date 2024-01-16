@@ -1,8 +1,8 @@
 # u-blox GNSS receiver
-SUBSYSTEMS=="usb", SUBSYSTEM=="tty", ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a8", ACTION=="add", SYMLINK+="ttyGPS%n"
+SUBSYSTEMS=="usb", SUBSYSTEM=="tty", ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a8", ACTION=="add", SYMLINK+="ttyGPS"
 
 # headMCU
-SUBSYSTEMS=="usb", SUBSYSTEM=="tty", ATTRS{idProduct}=="9206", ATTRS{idVendor}=="1b4f", ACTION=="add", SYMLINK+="ttySparkfunProMicro%n" 
+SUBSYSTEMS=="usb", SUBSYSTEM=="tty", ATTRS{idProduct}=="9206", ATTRS{idVendor}=="1b4f", ACTION=="add", SYMLINK+="ttySparkfunProMicro"
 
 # lighting RP2040
-SUBSYSTEMS=="usb", SUBSYSTEM=="tty", ATTRS{idProduct}=="000a", ATTRS{idVendor}=="2e8a", ATTRS{serial}=="E6611CB71F3D1328",  ACTION=="add", SYMLINK+="ttyLighting%n" 
+SUBSYSTEMS=="usb", SUBSYSTEM=="tty", ATTRS{idProduct}=="000a", ATTRS{idVendor}=="2e8a", ATTRS{serial}=="E6611CB71F3D1328",  ACTION=="add", SYMLINK+="ttyLighting"
