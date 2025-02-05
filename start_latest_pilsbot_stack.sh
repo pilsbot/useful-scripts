@@ -20,7 +20,11 @@ docker run -it \
 --security-opt=apparmor:unconfined \
 --volume=/tmp/.X11-unix:/tmp/.X11-unix \
 --volume /dev:/dev \
+--volume=/media/externSSD/bags:/workspaces/bags \
 --volume /home/pilsbot/pilsbot_vscode_ws:/workspaces/pilsbot_vscode_ws \
-pilsbot/pilsbot_hw_ros:latest
+vsc-pilsbot_vscode_ws-df0237f349a7283206d3077a15ceb2c3b24dcd957bb7227b1153bdbc4800c0d7-uid #\
+# ros2 launch pilsbot_bringup pilsbot.launch.py #TODO: Find out how to source correct workspace and then start
 
-#--volume=/media/externSSD/bags:/workspaces/bags \
+
+#pilsbot/pilsbot_hw_ros:latest
+
