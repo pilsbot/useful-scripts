@@ -10,19 +10,22 @@ fi
 
 echo "For joystick teleop, type 'ros2 launch pilsbot_bringup pilsbot.launch.py'"
 # see pilsbot_vscode_ws/.devcontainer/devcontainer.json
-docker run -it \
+#docker run -it \
+docker run --detach \
 --privileged \
 --user ros \
 --gpus=all \
---volume=/tmp/argus_socket:/tmp/argus_socket \
 --network=host --cap-add=SYS_PTRACE \
 --security-opt=seccomp:unconfined \
 --security-opt=apparmor:unconfined \
---volume=/tmp/.X11-unix:/tmp/.X11-unix \
+--volume /tmp/argus_socket:/tmp/argus_socket \
+--volume /tmp/.X11-unix:/tmp/.X11-unix \
 --volume /dev:/dev \
---volume=/media/externSSD/bags:/workspaces/bags \
+--volume /media/externSSD/bags:/workspaces/bags \
 --volume /home/pilsbot/pilsbot_vscode_ws:/workspaces/pilsbot_vscode_ws \
-vsc-pilsbot_vscode_ws-df0237f349a7283206d3077a15ceb2c3b24dcd957bb7227b1153bdbc4800c0d7-uid #\
+vsc-pilsbot_vscode_ws-df0237f349a7283206d3077a15ceb2c3b24dcd957bb7227b1153bdbc4800c0d7-uid \
+/workspaces/pilsbot_vscode_ws/in_correct_dir_launch_pilsbot_stack_in_kohlmode.sh
+
 # ros2 launch pilsbot_bringup pilsbot.launch.py #TODO: Find out how to source correct workspace and then start
 
 

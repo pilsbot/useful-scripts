@@ -1,7 +1,10 @@
 #!/bin/bash
 set -e
 
-./enable_motors.bash
-./setup_serials.bash
-./start_latest_pilsbot_stack.sh
-./disable_motors.bash
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+$SCRIPT_DIR/enable_motors.bash
+$SCRIPT_DIR/setup_serials.bash
+$SCRIPT_DIR/start_latest_pilsbot_stack.sh
+# The start script now will start it as daemon!
+#$SCRIPT_DIR/disable_motors.bash
