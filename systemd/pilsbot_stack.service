@@ -1,0 +1,14 @@
+[Unit]
+Description=PILSBOT Ros2 complete stack
+After=multi-user.target
+StartLimitIntervalSec=5
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/home/pilsbot/useful-scripts/startall.bash
+
+[Install]
+WantedBy=multi-user.target
